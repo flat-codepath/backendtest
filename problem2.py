@@ -1,7 +1,11 @@
 # importing the data from the database.py file
 from database import *
 
-order_items = ["tofu_log", "burgr"]
+# order_items = ["tofu_log", "burgr"]
+# or
+order_items =[order1, order2]=input('order the items by space in between each item').split()
+
+
 
 def find_min_price(order_items):
     # convert string 'inf' to infinite
@@ -30,7 +34,7 @@ def find_min_price(order_items):
 result = find_min_price(order_items)
 if result is not None:
    for item in result:
-       print(item)
+       print(f'{item} ,',end='')
 else:
     print('No matching restaurant found')
 

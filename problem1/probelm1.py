@@ -1,12 +1,12 @@
 # import files from database.py
 from  database import files
 
-def calculate_directory_size(file_system, dir_path):
+def calculate_size(dir_path):
 
     directories = dir_path.split('.')
 
 
-    current_directory = file_system
+    current_directory = files
 
 
     for directory in directories:
@@ -31,4 +31,4 @@ def calculate_directory_size(file_system, dir_path):
 
 
 
-print(calculate_directory_size(files,"root.dir1.subdir1"))
+print(calculate_size(files,"root.dir1.subdir1"))
