@@ -1,7 +1,7 @@
+# importing the data from the database.py file
 from database import *
 
 order_items = ["tofu_log", "burger"]
-
 
 def find_min_price(order_items):
     price = float('inf')
