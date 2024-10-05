@@ -1,9 +1,10 @@
 # importing the data from the database.py file
 from database import *
 
-order_items = ["tofu_log", "burger"]
+order_items = ["tofu_log", "burgr"]
 
 def find_min_price(order_items):
+    # convert string 'inf' to infinite
     price = float('inf')
     hotel_with_min_prices = None
     found = False
@@ -19,7 +20,19 @@ def find_min_price(order_items):
                 found = True
 
 
-    return (hotel_with_min_prices, price) if found else None
+
+    if found:
+        return (hotel_with_min_prices, price)
+    else:
+        return None
 
 
 result = find_min_price(order_items)
+if result is not None:
+   for item in result:
+       print(item)
+else:
+    print('No matching restaurant found')
+
+
+
