@@ -15,6 +15,7 @@ def find_min_price(order_items):
 
     # checking for the allItems in a hotel
     for restaurant, menu in restaurant_data.items():
+        print(menu)
         if all(food in menu for food in order_items):
             total_price = sum(menu[food] for food in order_items)
 
